@@ -12,9 +12,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     NSArray *arr = @[@4,@2,@7,@1,@3,@6,@9];
     BinaryTreeNode *node = [BinaryTree createTreeWithValues:arr];
-    [BinaryTree treeFirstInformationWithNode:nil resultBlock:^(NSInteger value) {
-        NSLog(@"%ld",(long)value);
-    } ];
+    NSInteger  i = [BinaryTree depathOfTree:node];
+    NSLog(@"%ld",i);
     return YES;
 }
 

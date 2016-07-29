@@ -110,6 +110,28 @@
     }
 }
 
+/// 二叉树深度
++ (NSInteger)depathOfTree:(BinaryTreeNode *)rootNode{
+    if (!rootNode) return 0;
+    if (!rootNode.leftNode && !rootNode.rightNode) return 1;
+    NSInteger leftDepth = [self depathOfTree:rootNode.leftNode];
+    NSInteger rightDepth = [self depathOfTree:rootNode.rightNode];
+    return MAX(leftDepth, rightDepth) + 1;
+}
+
+/// 二叉树所有节点数  节点数=左子树节点数+右子树节点数+1（根节点）
++ (NSInteger)numberOfNodesInTree:(BinaryTreeNode *)rootNode{
+    if (!rootNode) return 0;
+    return [self numberOfNodesInTree:rootNode.leftNode] + [self numberOfNodesInTree:rootNode.rightNode] + 1;
+}
+
+//二叉树中某个节点到根节点的路径
++ (NSArray *)pathOfTreeNode:(BinaryTreeNode *)treeNode inTree:(BinaryTreeNode *)rootNode {
+    NSMutableArray *pathArray = [NSMutableArray array];
+    [self isFoundTreeNode:treeNode inTree:rootNode routePath:pathArray];
+    return pathArray;
+}
+
 #pragma mark - Private SEL
 
 
@@ -133,4 +155,29 @@
     return treeNode;
 }
 
++ (BOOL)isFoundTreeNode:(BinaryTreeNode *)treeNode inTree:(BinaryTreeNode *)rootNode routePath:(NSMutableArray *)path {
+    
+    if (!rootNode || !treeNode) {
+        return NO;
+    }
+    //找到节点
+    if (rootNode == treeNode) {
+        [path addObject:rootNode];
+        return YES;
+    }
+    //压入根节点，进行递归
+    [path addObject:rootNode];
+    //先从左子树中查找
+    BOOL find = [self isFoundTreeNode:treeNode inTree:rootNode.leftNode routePath:path];
+    //未找到，再从右子树查找
+    if (!find) {
+        find = [self isFoundTreeNode:treeNode inTree:rootNode.rightNode routePath:path];
+    }
+    //如果2边都没查找到，则弹出此根节点
+    if (!find) {
+        [path removeLastObject];
+    }
+    
+    return find;
+}
 @end
