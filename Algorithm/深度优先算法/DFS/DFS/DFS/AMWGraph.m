@@ -1,10 +1,3 @@
-//
-//  AMWGraph.m
-//  DFS
-//
-//  Created by taoxiaofei on 16/8/1.
-//  Copyright © 2016年 Deter. All rights reserved.
-//
 
 #import "AMWGraph.h"
 
