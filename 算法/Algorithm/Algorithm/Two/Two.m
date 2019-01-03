@@ -62,21 +62,4 @@
     return res;
 }
 
-+ (NSInteger)calculate4:(NSArray<NSNumber *> *)ary{
-    NSInteger res = NSIntegerMax;
-    
-    NSInteger begin = 1;
-    NSInteger end = ary.count - 1;
-    
-    while (begin <= end) {
-        NSInteger mid = ((end - begin)>>1) + begin;
-        
-        NSInteger count = 0;
-    }
-    
-    
-    
-    return res;
-}
-
 @end

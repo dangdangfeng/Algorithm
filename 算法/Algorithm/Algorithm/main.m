@@ -10,11 +10,14 @@
 #import "One.h"
 #import "Two.h"
 #import "Three.h"
+#import "Five.h"
+#include <stdio.h>
+#import "1.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // insert code here...
-        NSLog(@"Hello, World!");
+//        NSLog(@"Hello, World!");
 //        NSLog(@"one=%tu",[One calculate:@[@1,@3,@4,@5,@6,@7,@2]]);
 //        NSLog(@"two=%tu",[Two calculate1:@[@1,@2,@3,@4,@5,@6,@7,@2]]);
 //        NSLog(@"two=%tu",[Two calculate2:@[@1,@2,@3,@4,@5,@6,@4,@7,@2]]);
