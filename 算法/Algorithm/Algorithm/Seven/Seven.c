@@ -15,7 +15,7 @@ int StrToInt(const char* str){
     static const int MAX_INT = (int)((unsigned)~0 >> 1);
     static const int MIN_INT = -(int)((unsigned)~0 >> 1) - 1;
     unsigned int n = 0;
-    
+
     printf("%c",*str);
     
     if (str == 0) {
