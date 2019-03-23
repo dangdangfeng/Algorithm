@@ -11,4 +11,6 @@
 
 #include <stdio.h>
 
+int main1(void);
+
 #endif /* Eleven_h */

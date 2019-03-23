@@ -17,6 +17,7 @@
 		8EA9154821DDED3900FAC7FA /* Eight.c in Sources */ = {isa = PBXBuildFile; fileRef = 8EA9154721DDED3900FAC7FA /* Eight.c */; };
 		8EA9154C21DDFA9200FAC7FA /* Nine.c in Sources */ = {isa = PBXBuildFile; fileRef = 8EA9154B21DDFA9200FAC7FA /* Nine.c */; };
 		8EA9155321DE114600FAC7FA /* Ten.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8EA9155121DE114600FAC7FA /* Ten.cpp */; };
+		8EBB401621E4537F00B3B13D /* Twelve.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8EBB401421E4537F00B3B13D /* Twelve.cpp */; };
 		8EDDC5A921D5C8AD00F315F7 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8EDDC5A821D5C8AD00F315F7 /* main.cpp */; };
 		8EDDC5B821D5C9A100F315F7 /* One.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EDDC5B721D5C9A100F315F7 /* One.m */; };
 		8EF7168621D60BCF00574C7B /* Two.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF7168521D60BCF00574C7B /* Two.m */; };
@@ -55,6 +56,8 @@
 		8EA9154B21DDFA9200FAC7FA /* Nine.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Nine.c; sourceTree = "<group>"; };
 		8EA9155121DE114600FAC7FA /* Ten.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Ten.cpp; sourceTree = "<group>"; };
 		8EA9155221DE114600FAC7FA /* Ten.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Ten.hpp; sourceTree = "<group>"; };
+		8EBB401421E4537F00B3B13D /* Twelve.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Twelve.cpp; sourceTree = "<group>"; };
+		8EBB401521E4537F00B3B13D /* Twelve.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Twelve.hpp; sourceTree = "<group>"; };
 		8EDDC5A521D5C8AD00F315F7 /* Algorithm */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Algorithm; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EDDC5A821D5C8AD00F315F7 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		8EDDC5B621D5C9A100F315F7 /* One.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = One.h; sourceTree = "<group>"; };
@@ -164,6 +167,15 @@
 			path = Ten;
 			sourceTree = "<group>";
 		};
+		8EBB401321E4535B00B3B13D /* Twelve */ = {
+			isa = PBXGroup;
+			children = (
+				8EBB401421E4537F00B3B13D /* Twelve.cpp */,
+				8EBB401521E4537F00B3B13D /* Twelve.hpp */,
+			);
+			path = Twelve;
+			sourceTree = "<group>";
+		};
 		8EDDC59C21D5C8AD00F315F7 = {
 			isa = PBXGroup;
 			children = (
@@ -183,6 +195,7 @@
 		8EDDC5A721D5C8AD00F315F7 /* Algorithm */ = {
 			isa = PBXGroup;
 			children = (
+				8EBB401321E4535B00B3B13D /* Twelve */,
 				8E64CEF621DF5D3200FBC07D /* Eleven */,
 				8EA9154D21DE0F6700FAC7FA /* Ten */,
 				8EA9154921DDFA4000FAC7FA /* Nine */,
@@ -276,6 +289,7 @@
 			files = (
 				8EA9154421DDDF1800FAC7FA /* Seven.c in Sources */,
 				8E8D52FA21D76A0D00E79A67 /* Four.m in Sources */,
+				8EBB401621E4537F00B3B13D /* Twelve.cpp in Sources */,
 				8EA4DF1321DC9B7A002DC46D /* 1.c in Sources */,
 				8EA9155321DE114600FAC7FA /* Ten.cpp in Sources */,
 				8E64CEF921DF5D9D00FBC07D /* Eleven.c in Sources */,
