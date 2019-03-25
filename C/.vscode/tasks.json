@@ -1,0 +1,75 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [{
+      "label": "Compile",
+      "type": "shell",
+      "command": "clang",
+      "args": [
+        "${file}",
+        "-o", // 指定输出文件名，不加该参数则默认输出a.exe，Linux下默认a.out
+        "${fileDirname}/${fileBasenameNoExtension}",
+        "-g", // 生成和调试有关的信息
+        "-Wall", // 开启额外警告
+        "-std=c11" // C语言最新标准为c11，或根据自己的需要进行修改
+      ],
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true
+      },
+      "dependsOn": [
+        "Sleep"
+      ]
+    },
+    {
+      "label": "Clean",
+      "type": "shell",
+      "command": "rm",
+      "args": [
+        "-rf",
+        "${fileDirname}/${fileBasenameNoExtension}",
+        "${fileDirname}/${fileBasenameNoExtension}.dSYM"
+      ],
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true
+      }
+    },
+    {
+      "label": "Sleep", // 没有任何功能，只是简单暂停一下，增加视觉效果
+      "type": "shell",
+      "command": "sleep",
+      "args": [
+        "1"
+      ],
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true
+      },
+      "dependsOn": [
+        "Clean"
+      ]
+    },
+    {
+      "label": "Build",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "dependsOn": [
+        "Compile"
+      ],
+      "problemMatcher": "$gcc"
+    }
+  ]
+}
